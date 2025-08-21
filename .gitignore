@@ -1,0 +1,22 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Chroma DB files
+folder/history/chroma_langchain_db/
+*.bin
+*.sqlite3
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE settings
+.vscode/
+.idea/
