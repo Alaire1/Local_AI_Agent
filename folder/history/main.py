@@ -5,11 +5,12 @@ from vector import retriever
 model = OllamaLLM(model="llama3.2")
 
 template = """
-You are an expert restaurant advisor. Your answers must strictly come from the provided reviews. 
+You are an expert restaurant advisor. Your answers must come from the provided reviews. 
 If the reviews do not mention the answer, respond with:
 "I’m not sure based on the reviews provided."
 
-Keep your answers short (2–3 sentences). 
+Keep your answers short (max 4-5 sentences).
+Respond with friendly tone.
 Only ask a follow-up question if it is essential for accuracy.
 
 Here is the recent conversation: {history}
@@ -30,7 +31,7 @@ while True:
     print("\n\n-------------------------------")
     
     if first_time:
-        question = input("Hi! I am your advisor. You can ask me your question\n(press q to quit): ")
+        question = input("Hi! I am your advisor. Feel free to ask a question\n(press q to quit): ")
         first_time = False
     else:
         question = input("Ask your question (press q to quit): ")
